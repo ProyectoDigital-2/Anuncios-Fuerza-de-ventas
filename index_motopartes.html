@@ -332,6 +332,9 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 .cc-purple .col-acc-btn{border-color:#1E1E3C;color:#7F77DD;}
 .cc-purple .col-acc-btn.open{color:#AFA9EC;}
 .col-acc-body{flex-direction:column;}
+/* ── Excelencia Comercial deshabilitada (EXCEL_ACTIVO = false) ── */
+.col-excel-off .col-item{pointer-events:none;cursor:default;}
+
 
 .col-acc-arr{font-size:11px;transition:transform .25s;}
 .col-acc-btn.open .col-acc-arr{transform:rotate(90deg);}
@@ -1018,6 +1021,14 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 <script>
 var totalSlides=4,currentSlide=0;
 
+
+/* ════ EXCELENCIA COMERCIAL · control de acceso ════
+   Cambiar EXCEL_ACTIVO a true para habilitar los clicks ══════════ */
+var EXCEL_ACTIVO = false;
+document.addEventListener('DOMContentLoaded', function(){
+  var amber = document.querySelector('.cc-amber');
+  if(amber) amber.classList.toggle('col-excel-off', !EXCEL_ACTIVO);
+});
 function toggleColAcc(btn){
   var body=btn.nextElementSibling;
   var open=body.classList.contains('open');

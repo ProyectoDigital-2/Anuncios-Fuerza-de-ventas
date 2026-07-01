@@ -129,9 +129,24 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
             <div class="col-item-ico">📅</div>
             <div><div class="col-item-ttl">S&amp;OP</div><div class="col-item-sub">Máximos y mínimos</div></div>
           </div>
-          <div class="col-item" style="border-bottom:none;" onclick="goTo('page-tlc')">
+          <div class="col-item" onclick="goTo('page-tlc')">
             <div class="col-item-ico">📈</div>
             <div><div class="col-item-ttl">Reporte TLC semanal</div><div class="col-item-sub">Semana anterior</div></div>
+          </div>
+          <!-- ── Sub-menú: Mejoras logísticas ── -->
+          <div class="sub-acc-btn" onclick="toggleSubAcc(this)">
+            <span>🚚 Mejoras logísticas</span>
+            <span class="sub-acc-arr">▶</span>
+          </div>
+          <div class="sub-acc-body">
+            <div class="sub-acc-item">
+              <div class="sub-acc-num">1</div>
+              <div class="sub-acc-txt">Apertura de rutas con mejor servicio del mismo día y siguiente día</div>
+            </div>
+            <div class="sub-acc-item" style="border-bottom:none;">
+              <div class="sub-acc-num">2</div>
+              <div class="sub-acc-txt">Incremento a <strong>$1,700</strong> el monto límite para pagos de contado en Uber</div>
+            </div>
           </div>
         </div>
       </div>
@@ -269,7 +284,17 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 
 /* Acordeón suave con max-height */
 .col-acc-body{overflow:hidden;max-height:0;transition:max-height .32s ease;display:flex;flex-direction:column;}
-.col-acc-body.open{max-height:450px;}
+.col-acc-body.open{max-height:700px;}
+/* ── Sub-acordeón Mejoras logísticas ── */
+.sub-acc-btn{display:flex;align-items:center;justify-content:space-between;padding:8px 4px 8px 8px;cursor:pointer;border-top:0.5px solid #1E1E3C;font-size:11px;font-weight:700;color:#5DCAA5;transition:background .18s;}
+.sub-acc-btn:hover{background:#091814;}
+.sub-acc-arr{font-size:10px;transition:transform .25s ease;display:inline-block;}
+.sub-acc-btn.open .sub-acc-arr{transform:rotate(90deg);}
+.sub-acc-body{display:none;flex-direction:column;padding:4px 0 4px 8px;border-left:2px solid #1D9E75;margin:4px 4px 4px 8px;border-radius:0 0 4px 4px;}
+.sub-acc-body.open{display:flex;}
+.sub-acc-item{display:flex;gap:8px;align-items:flex-start;padding:7px 4px;border-bottom:0.5px solid #0A2C20;font-size:11px;color:#9FE1CB;line-height:1.5;}
+.sub-acc-num{width:18px;height:18px;border-radius:50%;background:#085041;color:#5DCAA5;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.sub-acc-txt strong{color:#fff;}
 
 /* Botón acordeón hover */
 .col-acc-btn{transition:background .18s ease;}
@@ -331,6 +356,9 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 .cc-purple .col-acc-btn{border-color:#1E1E3C;color:#7F77DD;}
 .cc-purple .col-acc-btn.open{color:#AFA9EC;}
 .col-acc-body{flex-direction:column;}
+/* ── Excelencia Comercial deshabilitada (EXCEL_ACTIVO = false) ── */
+.col-excel-off .col-item{pointer-events:none;cursor:default;}
+
 
 .col-acc-arr{font-size:11px;transition:transform .25s;}
 .col-acc-btn.open .col-acc-arr{transform:rotate(90deg);}
@@ -1015,6 +1043,20 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 
 <script>
 
+
+/* ════ EXCELENCIA COMERCIAL · control de acceso ════
+   Cambiar EXCEL_ACTIVO a true para habilitar los clicks ══════════ */
+var EXCEL_ACTIVO = false;
+document.addEventListener('DOMContentLoaded', function(){
+  var amber = document.querySelector('.cc-amber');
+  if(amber) amber.classList.toggle('col-excel-off', !EXCEL_ACTIVO);
+});
+function toggleSubAcc(btn){
+  var body=btn.nextElementSibling;
+  var open=body.classList.contains('open');
+  body.classList.toggle('open',!open);
+  btn.classList.toggle('open',!open);
+}
 function toggleColAcc(btn){
   var body=btn.nextElementSibling;
   var open=body.classList.contains('open');
