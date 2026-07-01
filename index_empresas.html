@@ -96,6 +96,10 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
         <div class="col-head-lbl">Comunicación Comercial</div>
       </div>
       <div class="col-body">
+        <div class="col-item" onclick="goTo('page-parque')">
+          <div class="col-item-ico">🚀</div>
+          <div><div class="col-item-ttl">Levantamiento de parque</div><div class="col-item-sub">Campaña vehicular · Empresas</div></div>
+        </div>
         <div class="col-item" onclick="goTo('page-mercanciabordo')">
           <div class="col-item-ico">🚚</div>
           <div><div class="col-item-ttl">Mercancía a bordo</div><div class="col-item-sub">Seguimiento de pedidos</div></div>
@@ -106,7 +110,10 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
         </div>
         <div class="col-item" onclick="goTo('page-llegadas')">
           <div class="col-item-ico">📦</div>
-          <div><div class="col-item-ttl">Llegadas de producto</div><div class="col-item-sub">Nuevos del mes</div></div>
+          <div>
+            <div class="col-item-ttl">Llegada de productos nuevos</div>
+            <div class="col-item-sub">Fecha de llegada de productos nuevos</div>
+          </div>
         </div>
         <div class="col-item" onclick="window.open('https://autopartesymas.sharepoint.com/sites/Comunicacincomercialapymsa/SitePages/Uso-de-Uber-en-Empresas.aspx','_blank')">
           <div class="col-item-ico">🚗</div>
@@ -129,7 +136,7 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
             <div class="col-item-ico">🛡️</div>
             <div><div class="col-item-ttl">Garantía Express</div><div class="col-item-sub">Reporte de garantías</div></div>
           </div>
-          <div class="col-item" onclick="goTo('page-sop')">
+          <div class="col-item" style="border-bottom:none;" onclick="goTo('page-sop')">
             <div class="col-item-ico">📅</div>
             <div><div class="col-item-ttl">S&amp;OP</div><div class="col-item-sub">Máximos y mínimos</div></div>
           </div>
@@ -165,10 +172,7 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
           <div class="col-item-ico">📅</div>
           <div><div class="col-item-ttl">S&amp;OP · Consignas</div><div class="col-item-sub">Planeación · Máximos y mínimos</div></div>
         </div>
-        <div class="col-item" style="border-bottom:none;" onclick="goTo('page-web-apymsa')">
-          <div class="col-item-ico">🌐</div>
-          <div><div class="col-item-ttl">Página web APYMSA</div><div class="col-item-sub">Multilista Clientes</div></div>
-        </div>
+
       </div>
     </div>
 
@@ -192,14 +196,11 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
           <div class="col-item-ico">🔄</div>
           <div><div class="col-item-ttl">Disciplina → Excelencia</div><div class="col-item-sub">Proceso · Semana a semana</div></div>
         </div>
-        <div class="col-item" onclick="goTo('page-excel-impacto')">
+        <div class="col-item" style="border-bottom:none;" onclick="goTo('page-excel-impacto')">
           <div class="col-item-ico">💡</div>
           <div><div class="col-item-ttl">Impacto y Valor</div><div class="col-item-sub">Cliente · Tu desarrollo</div></div>
         </div>
-        <div class="col-item" style="border-bottom:none;" onclick="goTo('page-parque')">
-          <div class="col-item-ico">🚀</div>
-          <div><div class="col-item-ttl">Levantamiento de parque</div><div class="col-item-sub">Campaña vehicular · Empresas</div></div>
-        </div>
+
       </div>
     </div>
 
@@ -344,6 +345,9 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 .cc-purple .col-acc-btn{border-color:#1E1E3C;color:#7F77DD;}
 .cc-purple .col-acc-btn.open{color:#AFA9EC;}
 .col-acc-body{flex-direction:column;}
+/* ── Excelencia Comercial deshabilitada (EXCEL_ACTIVO = false) ── */
+.col-excel-off .col-item{pointer-events:none;cursor:default;}
+
 
 .col-acc-arr{font-size:11px;transition:transform .25s;}
 .col-acc-btn.open .col-acc-arr{transform:rotate(90deg);}
@@ -1029,6 +1033,14 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 <script>
 var totalSlides=4,currentSlide=0;
 
+
+/* ════ EXCELENCIA COMERCIAL · control de acceso ════
+   Cambiar EXCEL_ACTIVO a true para habilitar los clicks ══════════ */
+var EXCEL_ACTIVO = false;
+document.addEventListener('DOMContentLoaded', function(){
+  var amber = document.querySelector('.cc-amber');
+  if(amber) amber.classList.toggle('col-excel-off', !EXCEL_ACTIVO);
+});
 function toggleColAcc(btn){
   var body=btn.nextElementSibling;
   var open=body.classList.contains('open');
