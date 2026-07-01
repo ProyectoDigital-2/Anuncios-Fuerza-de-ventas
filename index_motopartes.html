@@ -1017,6 +1017,13 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 
 <script>
 var totalSlides=4,currentSlide=0;
+
+function toggleColAcc(btn){
+  var body=btn.nextElementSibling;
+  var open=body.classList.contains('open');
+  body.classList.toggle('open',!open);
+  btn.classList.toggle('open',!open);
+}
 function showSlide(n){
   if(n<0||n>=totalSlides)return;
   var prev=document.getElementById('agenda-slide-'+currentSlide);
