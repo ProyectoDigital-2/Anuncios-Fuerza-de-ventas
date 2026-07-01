@@ -75,7 +75,7 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
     </div>
     <div class="top-right">
       <div class="badge">2026</div>
-      <div class="mes-badge">📅 Junio 2026</div>
+      <div class="mes-badge">📅 Julio 2026</div>
     </div>
   </div>
 
@@ -85,58 +85,136 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
   </div>
 
   <div class="section-tag">Para todas las divisiones</div>
-  <div class="common-grid">
-    <div class="pill"><div class="pill-icon">📦</div><div class="pill-text"><div class="pill-title">Llegadas de producto</div><div class="pill-sub">Nuevos del mes</div></div></div>
-    <div class="pill"><div class="pill-icon">🚚</div><div class="pill-text"><div class="pill-title">Mercancía a bordo</div><div class="pill-sub">Seguimiento de pedidos</div></div></div>
-    <div class="pill"><div class="pill-icon">🔍</div><div class="pill-text"><div class="pill-title">Búsqueda de producto</div><div class="pill-sub">Soporte técnico · Mesa de ayuda</div></div></div>
-    <div class="pill"><div class="pill-icon">📈</div><div class="pill-text"><div class="pill-title">Reporte TLC semanal</div><div class="pill-sub">Resultado semana anterior</div></div></div>
-    <div class="pill"><div class="pill-icon">🛡️</div><div class="pill-text"><div class="pill-title">Garantía Express</div><div class="pill-sub">Reporte de garantías</div></div></div>
-    <div class="pill"><div class="pill-icon">📣</div><div class="pill-text"><div class="pill-title">Conecta Merca</div><div class="pill-sub">Promo, revistas, catálogos</div></div></div>
-    <div class="pill"><div class="pill-icon">📖</div><div class="pill-text"><div class="pill-title">Catálogo digital</div><div class="pill-sub">Consulta de productos</div></div></div>
-    <div class="pill"><div class="pill-icon">🗓️</div><div class="pill-text"><div class="pill-title">Uso de agendas</div><div class="pill-sub">Herramienta de gestión</div></div></div>
-    <div class="pill"><div class="pill-icon">🎓</div><div class="pill-text"><div class="pill-title">Universidad APYMSA</div><div class="pill-sub">Curso uso de Épico</div></div></div>
-    <div class="pill"><div class="pill-icon">🌐</div><div class="pill-text"><div class="pill-title">Página web APYMSA</div><div class="pill-sub">Multilista Clientes · Enfoque y Fuga</div></div></div>
-    <div class="pill"><div class="pill-icon">📱</div><div class="pill-text"><div class="pill-title">Responsiva de Tablets</div><div class="pill-sub">Firma digital</div></div></div>
-    <div class="pill"><div class="pill-icon">📅</div><div class="pill-text"><div class="pill-title">S&amp;OP</div><div class="pill-sub">Mesa de ayuda de máximos y mínimos</div></div></div>
-    <div onclick="goTo('page-proximamente')" style="grid-column:1/-1;background:#1A2A10;border:1.5px dashed #5A7A28;border-radius:12px;padding:12px 18px;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:background .2s;" onmouseenter="this.style.background='#243A14'" onmouseleave="this.style.background='#1A2A10'">
-      <span style="font-size:16px;">🔜</span>
-      <span style="font-size:13px;font-weight:700;color:#A8C870;letter-spacing:.06em;text-transform:uppercase;">Próximamente</span>
-      <span style="background:#EF9F27;color:#2C1800;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;margin-left:4px;">4 nuevos anuncios</span>
-      <span style="color:#5A7A28;font-size:18px;font-weight:700;margin-left:auto;">›</span>
+<!-- ═══ COLUMNAS DESLIZABLES · OPCIÓN 2 ═══ -->
+  <div class="col-scroll">
+
+    <!-- ── COMUNICACIÓN COMERCIAL ── -->
+    <div class="col-card cc-purple">
+      <div class="col-strip"></div>
+      <div class="col-head">
+        <span class="col-head-ico">💬</span>
+        <div class="col-head-lbl">Comunicación Comercial</div>
+      </div>
+      <div class="col-body">
+        <div class="col-item" onclick="goTo('page-mercanciabordo')">
+          <div class="col-item-ico">🚚</div>
+          <div><div class="col-item-ttl">Mercancía a bordo</div><div class="col-item-sub">Seguimiento de pedidos</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-agendas')">
+          <div class="col-item-ico">🗓️</div>
+          <div><div class="col-item-ttl">Uso de agendas</div><div class="col-item-sub">Herramienta de gestión</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-llegadas')">
+          <div class="col-item-ico">📦</div>
+          <div><div class="col-item-ttl">Llegadas de producto</div><div class="col-item-sub">Nuevos del mes</div></div>
+        </div>
+        <div class="col-item" onclick="window.open('https://autopartesymas.sharepoint.com/sites/Comunicacincomercialapymsa/SitePages/Uso-de-Uber-en-Empresas.aspx','_blank')">
+          <div class="col-item-ico">🚗</div>
+          <div><div class="col-item-ttl">Uber Empresas</div><div class="col-item-sub">Uso y lineamientos</div></div>
+        </div>
+        <div class="col-item col-garra" onclick="goTo('page-garra-empresas')">
+          <div class="col-item-ico">🏆</div>
+          <div><div class="col-item-ttl">Reconocimiento Garra APYMSA</div><div class="col-item-sub">Empresas · Temporada activa</div></div>
+        </div>
+        <div class="col-acc-btn" onclick="toggleColAcc(this)">
+          <span>📊 Reportes varios</span>
+          <span class="col-acc-arr">▶</span>
+        </div>
+        <div class="col-acc-body">
+          <div class="col-item" onclick="goTo('page-busqueda')">
+            <div class="col-item-ico">🔍</div>
+            <div><div class="col-item-ttl">Búsqueda de producto</div><div class="col-item-sub">Mesa de ayuda</div></div>
+          </div>
+          <div class="col-item" onclick="goTo('page-garantia')">
+            <div class="col-item-ico">🛡️</div>
+            <div><div class="col-item-ttl">Garantía Express</div><div class="col-item-sub">Reporte de garantías</div></div>
+          </div>
+          <div class="col-item" onclick="goTo('page-sop')">
+            <div class="col-item-ico">📅</div>
+            <div><div class="col-item-ttl">S&amp;OP</div><div class="col-item-sub">Máximos y mínimos</div></div>
+          </div>
+          <div class="col-item" style="border-bottom:none;" onclick="goTo('page-tlc')">
+            <div class="col-item-ico">📈</div>
+            <div><div class="col-item-ttl">Reporte TLC semanal</div><div class="col-item-sub">Semana anterior</div></div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- ── HERRAMIENTAS DIGITALES ── -->
+    <div class="col-card cc-teal">
+      <div class="col-strip"></div>
+      <div class="col-head">
+        <span class="col-head-ico">🔧</span>
+        <div class="col-head-lbl">Herramientas Digitales</div>
+      </div>
+      <div class="col-body">
+        <div class="col-item" onclick="goTo('page-conectamerca')">
+          <div class="col-item-ico">📣</div>
+          <div><div class="col-item-ttl">Conecta Merca</div><div class="col-item-sub">Promo, revistas, catálogos</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-catalogo')">
+          <div class="col-item-ico">📖</div>
+          <div><div class="col-item-ttl">Catálogo digital</div><div class="col-item-sub">Consulta de productos</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-universidad')">
+          <div class="col-item-ico">🎓</div>
+          <div><div class="col-item-ttl">Universidad APYMSA</div><div class="col-item-sub">Curso uso de Épico</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-sop')">
+          <div class="col-item-ico">📅</div>
+          <div><div class="col-item-ttl">S&amp;OP · Consignas</div><div class="col-item-sub">Planeación · Máximos y mínimos</div></div>
+        </div>
+        <div class="col-item" style="border-bottom:none;" onclick="goTo('page-web-apymsa')">
+          <div class="col-item-ico">🌐</div>
+          <div><div class="col-item-ttl">Página web APYMSA</div><div class="col-item-sub">Multilista Clientes</div></div>
+        </div>
+      </div>
+    </div>
 
-
+    <!-- ── EXCELENCIA COMERCIAL ── -->
+    <div class="col-card cc-amber">
+      <div class="col-strip"></div>
+      <div class="col-head">
+        <span class="col-head-ico">⭐</span>
+        <div class="col-head-lbl">Excelencia Comercial</div>
+      </div>
+      <div class="col-body">
+        <div class="col-item" onclick="goTo('page-excel-que-es')">
+          <div class="col-item-ico">⭐</div>
+          <div><div class="col-item-ttl">¿Qué es la Excelencia?</div><div class="col-item-sub">Índice · Auditorías · Capacitación</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-excel-indicadores')">
+          <div class="col-item-ico">📊</div>
+          <div><div class="col-item-ttl">Indicadores</div><div class="col-item-sub">Índice Asesor · Índice Líder</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-excel-disciplina')">
+          <div class="col-item-ico">🔄</div>
+          <div><div class="col-item-ttl">Disciplina → Excelencia</div><div class="col-item-sub">Proceso · Semana a semana</div></div>
+        </div>
+        <div class="col-item" onclick="goTo('page-excel-impacto')">
+          <div class="col-item-ico">💡</div>
+          <div><div class="col-item-ttl">Impacto y Valor</div><div class="col-item-sub">Cliente · Tu desarrollo</div></div>
+        </div>
+        <div class="col-item" style="border-bottom:none;" onclick="goTo('page-parque')">
+          <div class="col-item-ico">🚀</div>
+          <div><div class="col-item-ttl">Levantamiento de parque</div><div class="col-item-sub">Campaña vehicular · Empresas</div></div>
+        </div>
+      </div>
+    </div>
 
   </div>
 
-  <hr class="divider-line">
-  <div class="excl-section-tag">Exclusivos por división</div>
-  <div class="divisions" style="display:flex;justify-content:center;">
-    <div class="div-block" style="align-self:start;width:100%;max-width:500px;margin:0 auto;">
-      <div class="div-header dh-purple"><span class="div-emoji">🏢</span><span class="div-name dn-purple">Empresas</span></div>
-      <div class="div-body db-purple">
-        <div class="excl-pill ep-purple" style="cursor:pointer;" onclick="window.open('https://autopartesymas.sharepoint.com/sites/Comunicacincomercialapymsa/SitePages/Uso-de-Uber-en-Empresas.aspx','_blank')" onmouseenter="this.style.opacity='0.8'" onmouseleave="this.style.opacity='1'"><span class="ep-emoji">🚗</span><div style="flex:1;"><div class="ep-title ept-purple">Uber Empresas</div></div><span style="color:#7F77DD;font-size:16px;font-weight:700;align-self:center;flex-shrink:0;">›</span></div>
-        <div class="excl-pill ep-purple"><span class="ep-emoji">📅</span><div><div class="ep-title ept-purple">S&amp;OP</div><div class="ep-sub eps-purple">Consignas</div></div></div>
-        <div class="excl-pill" style="background:#1C1040;border:0.5px solid #5A4AB5;cursor:pointer;" onclick="goTo('page-parque')" onmouseenter="this.style.background='#261854'" onmouseleave="this.style.background='#1C1040'">
-          <span class="ep-emoji">🚀</span>
-          <div style="flex:1;"><div class="ep-title ept-purple">Levantamiento de parque vehicular <span style="color:#7F77DD;font-weight:400;">// Campaña</span></div></div>
-          <span style="color:#7F77DD;font-size:16px;font-weight:700;align-self:center;flex-shrink:0;">›</span>
-        </div>
-        <div class="excl-pill ep-garra-purple" style="cursor:pointer;" onclick="goTo('page-garra-empresas')" onmouseenter="this.style.opacity='0.8'" onmouseleave="this.style.opacity='1'"><span class="ep-emoji">🏆</span><div style="flex:1;"><div class="ep-title ept-garra">Reconocimiento Garra APYMSA</div></div><span style="color:#F5A623;font-size:16px;font-weight:700;align-self:center;flex-shrink:0;">›</span></div>
-      </div>
-    </div>
-</div>
-
   <div class="footer">
     <div class="footer-dot"></div>
-    <div class="footer-text">Comunicación interna · APYMSA · Junio 2026</div>
+    <div class="footer-text">Comunicación interna · APYMSA · Julio 2026</div>
     <div class="footer-dot"></div>
   </div>
 </div>
 </div>
 
 </html>
+
 
 <style>
 .page{display:none;}
@@ -164,6 +242,112 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
 .prox-card-icon{width:32px;height:32px;background:#1E2A10;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
 .prox-card-title{font-size:13px;font-weight:600;color:#A8C870;line-height:1.3;}
 .prox-card-sub{font-size:11px;color:#6A8A40;margin-top:3px;line-height:1.4;}
+
+/* ══ ANIMACIONES ══════════════════════════════════════ */
+@keyframes colIn{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:translateX(0)}}
+@keyframes stripGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes garraPulse{0%,100%{background:#1A1500}50%{background:#241C00}}
+@keyframes headPop{0%{transform:scale(1)}40%{transform:scale(1.12)}100%{transform:scale(1)}}
+
+/* Entrada de columnas escalonada */
+.col-card{animation:colIn .4s cubic-bezier(.22,1,.36,1) both;}
+.col-card:nth-child(1){animation-delay:.06s}
+.col-card:nth-child(2){animation-delay:.16s}
+.col-card:nth-child(3){animation-delay:.26s}
+
+/* Franja superior crece desde la izquierda */
+.col-strip{transform-origin:left;animation:stripGrow .55s cubic-bezier(.22,1,.36,1) both;}
+.col-card:nth-child(1) .col-strip{animation-delay:.06s}
+.col-card:nth-child(2) .col-strip{animation-delay:.16s}
+.col-card:nth-child(3) .col-strip{animation-delay:.26s}
+
+/* Header del card aparece con bounce */
+.col-head{animation:fadeUp .4s ease both;}
+.col-card:nth-child(1) .col-head{animation-delay:.18s}
+.col-card:nth-child(2) .col-head{animation-delay:.28s}
+.col-card:nth-child(3) .col-head{animation-delay:.38s}
+
+/* Hover + press en items */
+.col-item{transition:background .18s ease,transform .14s ease;}
+.col-item:hover{transform:translateX(5px);}
+.col-item:active{transform:scale(.96);}
+.cc-purple .col-item:hover{background:#131828;}
+.cc-teal   .col-item:hover{background:#09201A;}
+.cc-amber  .col-item:hover{background:#1C0F00;}
+
+/* Ícono rebota al hover */
+.col-item-ico{transition:transform .22s cubic-bezier(.34,1.56,.64,1);}
+.col-item:hover .col-item-ico{transform:scale(1.22);}
+
+/* Acordeón suave con max-height */
+.col-acc-body{overflow:hidden;max-height:0;transition:max-height .32s ease;display:flex;flex-direction:column;}
+.col-acc-body.open{max-height:450px;}
+
+/* Botón acordeón hover */
+.col-acc-btn{transition:background .18s ease;}
+.cc-purple .col-acc-btn:hover{background:#131828;}
+.col-acc-arr{display:inline-block;transition:transform .25s ease;}
+.col-acc-btn.open .col-acc-arr{transform:rotate(90deg);}
+
+/* Garra pulsa suavemente */
+.col-garra{animation:garraPulse 2.6s ease-in-out infinite;cursor:pointer;}
+.col-garra:hover{transform:translateX(5px);animation:none;background:#221A00;}
+.col-garra:active{transform:scale(.96);}
+
+/* Headline aparece desde abajo */
+.headline{animation:fadeUp .45s .02s ease both;}
+.col-scroll{animation:fadeUp .4s .08s ease both;}
+
+/* Transición suave al cambiar de página */
+.page.active{animation:fadeUp .3s ease both;}
+
+.col-scroll{overflow-x:auto;display:flex;gap:10px;padding:4px 0 14px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.col-scroll::-webkit-scrollbar{display:none;}
+.col-card{min-width:200px;flex-shrink:0;border-radius:12px;overflow:hidden;}
+.col-strip{height:5px;}
+.col-head{padding:13px 10px 11px;text-align:center;}
+.col-head-ico{font-size:30px;display:block;margin-bottom:6px;}
+.col-head-lbl{font-size:13px;font-weight:700;}
+.col-body{padding:0 8px 10px;display:flex;flex-direction:column;}
+.col-item{display:flex;align-items:center;gap:9px;padding:9px 4px;border-bottom:0.5px solid;cursor:pointer;}
+.col-item:last-child{border-bottom:none;}
+.col-item-ico{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.col-item-ttl{font-size:12px;font-weight:600;line-height:1.3;}
+.col-item-sub{font-size:11px;margin-top:2px;}
+.cc-purple{background:#0B0F1C;border:0.5px solid #3C3489;}
+.cc-purple .col-strip{background:#534AB7;}
+.cc-purple .col-head-lbl{color:#AFA9EC;}
+.cc-purple .col-item{border-color:#1E1E3C;}
+.cc-purple .col-item-ico{background:#26215C;}
+.cc-purple .col-item-ttl{color:#CECBF6;}
+.cc-purple .col-item-sub{color:#7F77DD;}
+.cc-teal{background:#071410;border:0.5px solid #0F6E56;}
+.cc-teal .col-strip{background:#1D9E75;}
+.cc-teal .col-head-lbl{color:#5DCAA5;}
+.cc-teal .col-item{border-color:#0A2C20;}
+.cc-teal .col-item-ico{background:#04342C;}
+.cc-teal .col-item-ttl{color:#9FE1CB;}
+.cc-teal .col-item-sub{color:#1D9E75;}
+.cc-amber{background:#120A00;border:0.5px solid #854F0B;}
+.cc-amber .col-strip{background:#BA7517;}
+.cc-amber .col-head-lbl{color:#EF9F27;}
+.cc-amber .col-item{border-color:#2A1500;}
+.cc-amber .col-item-ico{background:#412402;}
+.cc-amber .col-item-ttl{color:#FAC775;}
+.cc-amber .col-item-sub{color:#BA7517;}
+.col-garra{background:#1A1500;}
+.col-garra .col-item-ico{background:#2A1E00 !important;}
+.col-garra .col-item-ttl{color:#FFD54F !important;}
+.col-garra .col-item-sub{color:#8A7200 !important;}
+.col-acc-btn{display:flex;align-items:center;justify-content:space-between;padding:9px 4px;cursor:pointer;border-top:0.5px solid;}
+.cc-purple .col-acc-btn{border-color:#1E1E3C;color:#7F77DD;}
+.cc-purple .col-acc-btn.open{color:#AFA9EC;}
+.col-acc-body{flex-direction:column;}
+
+.col-acc-arr{font-size:11px;transition:transform .25s;}
+.col-acc-btn.open .col-acc-arr{transform:rotate(90deg);}
+
 </style>
 
 
@@ -178,6 +362,229 @@ body { background: #060f1c; display: flex; justify-content: center; padding: 40p
     <div class="link-name">Llegadas de producto · Nuevos del mes</div>
     <div class="link-desc">Consulta los productos nuevos disponibles en Conecta Merca.<br>El sitio se abrirá en una pestaña nueva.</div>
     <a class="open-btn" href="https://conectamerca.com/productos-nuevos/" target="_blank">🌐 Abrir Productos Nuevos</a>
+  </div>
+</div></div>
+
+<!-- EXCELENCIA COMERCIAL — ¿QUÉ ES? -->
+<div class="page" id="page-excel-que-es"><div class="inner-page">
+  <div class="inner-header"><div class="inner-title">⭐ ¿Qué es la Excelencia Comercial?</div><button class="back-btn" onclick="goTo('page-main')">← Regresar</button></div>
+  <style>
+    .ec-tag{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:12px;background:#1a0800;color:#BA7517;border:1px solid #5A3A08;}
+    .ec-def{background:#0C1A2E;border:1px solid #1E3A5F;border-radius:12px;padding:14px 16px;margin-bottom:10px;font-size:12px;color:#85B7EB;line-height:1.7;}
+    .ec-def strong{color:#fff;}
+    .ec-card{background:#0C1A2E;border:1px solid #1E3A5F;border-radius:12px;padding:13px 15px;margin-bottom:8px;display:flex;gap:12px;align-items:flex-start;}
+    .ec-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0;}
+    .ec-card-ttl{font-size:13px;font-weight:700;color:#fff;margin-bottom:3px;}
+    .ec-card-sub{font-size:11px;color:#5F8BB5;line-height:1.5;}
+    .ec-footer{background:#0A1A08;border:1px solid #1D9E75;border-radius:10px;padding:10px 14px;font-size:11px;color:#5DCAA5;text-align:center;margin-top:4px;font-style:italic;}
+  </style>
+  <div class="ec-tag">Estrategia segundo semestre 2026</div>
+  <div class="ec-def">El estándar que se alcanza cuando los <strong>procesos de venta se ejecutan con método y consistencia</strong>, el equipo opera con alto desempeño y las competencias se fortalecen con la práctica diaria.</div>
+  <div class="ec-card">
+    <div class="ec-num" style="background:#378ADD;">01</div>
+    <div><div class="ec-card-ttl">📈 Índice de Excelencia</div><div class="ec-card-sub">Resultado de gestión comercial — mide constancia, cobertura y efectividad de cada asesor y líder.</div></div>
+  </div>
+  <div class="ec-card">
+    <div class="ec-num" style="background:#BA7517;">02</div>
+    <div><div class="ec-card-ttl">🔍 Auditorías de Excelencia</div><div class="ec-card-sub">Validación en campo — ejecución de excelencia verificada con presencia directa.</div></div>
+  </div>
+  <div class="ec-card">
+    <div class="ec-num" style="background:#1D9E75;">03</div>
+    <div><div class="ec-card-ttl">🎓 Capacitación</div><div class="ec-card-sub">Entrenamiento continuo — conocimiento de metodologías y procesos en la práctica diaria.</div></div>
+  </div>
+  <div class="ec-footer">Procesos asegurados · Equipos de alto desempeño · Competencias fortalecidas</div>
+</div></div>
+
+<!-- EXCELENCIA COMERCIAL — INDICADORES -->
+<div class="page" id="page-excel-indicadores"><div class="inner-page">
+  <div class="inner-header"><div class="inner-title">📊 Indicadores</div><button class="back-btn" onclick="goTo('page-main')">← Regresar</button></div>
+  <div class="ec-tag">¿Cómo se mide la excelencia comercial?</div>
+
+  <div style="background:#0A0F1E;border:1px solid #1E3A5F;border-radius:12px;padding:13px 15px;margin-bottom:10px;">
+    <div style="font-size:13px;font-weight:700;color:#85B7EB;margin-bottom:10px;display:flex;align-items:center;gap:8px;">🧑‍💼 Índice del Asesor</div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="background:#0C1A2E;border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:12px;font-weight:600;color:#CECBF6;">Cumplimiento de agenda</div><div style="font-size:10px;color:#5F8BB5;margin-top:2px;">¿Saliste a visitar todos los días?</div></div>
+        <div style="font-size:22px;font-weight:800;color:#378ADD;">15%</div>
+      </div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:12px;font-weight:600;color:#CECBF6;">Cobertura de clientes</div><div style="font-size:10px;color:#5F8BB5;margin-top:2px;">¿Cubriste toda la cartera?</div></div>
+        <div style="font-size:22px;font-weight:800;color:#378ADD;">20%</div>
+      </div>
+      <div style="background:#1A0F00;border:1px solid #5A3A08;border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:12px;font-weight:600;color:#FAC775;">Efectividad de visitas</div><div style="font-size:10px;color:#BA7517;margin-top:2px;">¿Cada visita generó propuesta o venta?</div></div>
+        <div style="text-align:right;"><div style="font-size:22px;font-weight:800;color:#EF9F27;">65%</div><div style="background:#EF9F27;color:#1A0800;font-size:9px;font-weight:800;padding:1px 6px;border-radius:4px;">CLAVE</div></div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#5F8BB5;font-style:italic;margin-top:8px;text-align:center;">El 65% está en la efectividad — donde la actividad se convierte en resultado.</div>
+  </div>
+
+  <div style="background:#0A0F1E;border:1px solid #1D9E75;border-radius:12px;padding:13px 15px;">
+    <div style="font-size:13px;font-weight:700;color:#5DCAA5;margin-bottom:10px;display:flex;align-items:center;gap:8px;">🏆 Índice del Líder</div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="background:#071410;border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:12px;font-weight:600;color:#9FE1CB;">Cobertura y cumplimiento de agenda</div><div style="font-size:10px;color:#1D9E75;margin-top:2px;">¿Visitas clientes de enfoque?</div></div>
+        <div style="font-size:22px;font-weight:800;color:#1D9E75;">20%</div>
+      </div>
+      <div style="background:#071410;border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:12px;font-weight:600;color:#9FE1CB;">Desarrollo de propuestas comerciales</div><div style="font-size:10px;color:#1D9E75;margin-top:2px;">¿Detectas y conviertes oportunidades?</div></div>
+        <div style="font-size:22px;font-weight:800;color:#1D9E75;">30%</div>
+      </div>
+      <div style="background:#041C10;border:1px solid #085041;border-radius:8px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:12px;font-weight:600;color:#5DCAA5;">Excelencia como Coach</div><div style="font-size:10px;color:#0F6E56;margin-top:2px;">¿Tu equipo cumple el estándar?</div></div>
+        <div style="text-align:right;"><div style="font-size:22px;font-weight:800;color:#5DCAA5;">50%</div><div style="background:#085041;color:#9FE1CB;font-size:9px;font-weight:800;padding:1px 6px;border-radius:4px;">ÉXITO</div></div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#1D9E75;font-style:italic;margin-top:8px;text-align:center;">El 50% depende de que su equipo cumpla el estándar. No puede ganar solo.</div>
+  </div>
+
+  <!-- SLIDE 6: Tres cosas del modelo para el Líder -->
+  <div style="background:#041C10;border:1px solid #085041;border-radius:12px;padding:13px 15px;margin-top:10px;">
+    <div style="font-size:13px;font-weight:700;color:#5DCAA5;margin-bottom:10px;">🎯 Tres cosas que el modelo define para ti como Líder</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="background:#071410;border-radius:8px;padding:10px 12px;">
+        <div style="font-size:11px;font-weight:800;color:#1D9E75;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;">Tu Rol</div>
+        <div style="font-size:12px;color:#9FE1CB;line-height:1.6;">Asegurar que tu equipo ejecute la rutina comercial. <strong style="color:#fff;">No solo revisar resultados — garantizar el proceso.</strong></div>
+      </div>
+      <div style="background:#071410;border-radius:8px;padding:10px 12px;">
+        <div style="font-size:11px;font-weight:800;color:#1D9E75;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;">Tu Herramienta</div>
+        <div style="font-size:12px;color:#9FE1CB;line-height:1.6;">El resultado (tablero) te dice <strong style="color:#fff;">quién necesita acompañamiento y en qué indicador.</strong> La conversación de coaching parte de ahí.</div>
+      </div>
+      <div style="background:#071410;border-radius:8px;padding:10px 12px;">
+        <div style="font-size:11px;font-weight:800;color:#1D9E75;text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;">Tu Medición</div>
+        <div style="font-size:12px;color:#9FE1CB;line-height:1.6;">El <strong style="color:#5DCAA5;">50% de tu índice depende del resultado de tu equipo.</strong> Tu éxito es inseparable del desarrollo de tus asesores.</div>
+      </div>
+    </div>
+    <div style="margin-top:10px;background:#0B2E18;border-radius:8px;padding:10px 14px;border-left:3px solid #5DCAA5;border-radius:0 8px 8px 0;">
+      <div style="font-size:12px;color:#9FE1CB;font-style:italic;line-height:1.6;"><strong style="color:#fff;">No eres evaluador</strong> de tu equipo. Eres el responsable de asegurar que tu equipo llegue al siguiente nivel.</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- EXCELENCIA COMERCIAL — DISCIPLINA A EXCELENCIA -->
+<div class="page" id="page-excel-disciplina"><div class="inner-page">
+  <div class="inner-header"><div class="inner-title">🔄 Disciplina → Excelencia</div><button class="back-btn" onclick="goTo('page-main')">← Regresar</button></div>
+  <div class="ec-tag">Semana a semana · Proceso continuo</div>
+
+  <div style="background:#07101E;border:1px solid #1E3A5F;border-radius:12px;padding:13px 15px;margin-bottom:10px;">
+    <div style="font-size:13px;font-weight:700;color:#85B7EB;margin-bottom:10px;">📌 Disciplina Comercial</div>
+    <div style="font-size:11px;color:#5F8BB5;margin-bottom:10px;line-height:1.6;">Constancia, cobertura e intención. Tres hábitos que se ejecutan, se miden y se aseguran cada semana.</div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="background:#0C1A2E;border-radius:8px;padding:9px 12px;border-left:3px solid #378ADD;border-radius:0 8px 8px 0;">
+        <div style="font-size:12px;font-weight:600;color:#CECBF6;">✅ Constancia con enfoque</div>
+        <div style="font-size:11px;color:#5F8BB5;margin-top:2px;">Planear y cumplir tu ruta, siempre. <span style="color:#378ADD;">(Cumplimiento de agenda)</span></div>
+      </div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:9px 12px;border-left:3px solid #378ADD;border-radius:0 8px 8px 0;">
+        <div style="font-size:12px;font-weight:600;color:#CECBF6;">✅ Cobertura total</div>
+        <div style="font-size:11px;color:#5F8BB5;margin-top:2px;">Todos los clientes visitados, sin excepciones. <span style="color:#378ADD;">(Cobertura de clientes)</span></div>
+      </div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:9px 12px;border-left:3px solid #EF9F27;border-radius:0 8px 8px 0;">
+        <div style="font-size:12px;font-weight:600;color:#FAC775;">✅ Intención</div>
+        <div style="font-size:11px;color:#BA7517;margin-top:2px;">Cada visita lleva una propuesta preparada. <span style="color:#EF9F27;">(Visita efectiva)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:8px 0;font-size:20px;color:#1D9E75;">↓</div>
+
+  <div style="background:#041C10;border:1px solid #1D9E75;border-radius:12px;padding:13px 15px;">
+    <div style="font-size:13px;font-weight:700;color:#5DCAA5;margin-bottom:10px;">🏆 Excelencia Comercial</div>
+    <div style="display:flex;flex-direction:column;gap:6px;">
+      <div style="background:#071410;border-radius:8px;padding:9px 12px;border-left:3px solid #1D9E75;border-radius:0 8px 8px 0;">
+        <div style="font-size:12px;font-weight:600;color:#9FE1CB;">Procesos asegurados</div>
+        <div style="font-size:11px;color:#1D9E75;margin-top:2px;">El asesor ejecuta su rutina: visita, agenda y prepara propuestas según lo planeado.</div>
+      </div>
+      <div style="background:#071410;border-radius:8px;padding:9px 12px;border-left:3px solid #1D9E75;border-radius:0 8px 8px 0;">
+        <div style="font-size:12px;font-weight:600;color:#9FE1CB;">Equipo de alto desempeño</div>
+        <div style="font-size:11px;color:#1D9E75;margin-top:2px;">El líder desarrolla, no solo supervisa.</div>
+      </div>
+      <div style="background:#071410;border-radius:8px;padding:9px 12px;border-left:3px solid #1D9E75;border-radius:0 8px 8px 0;">
+        <div style="font-size:12px;font-weight:600;color:#9FE1CB;">Competencias fortalecidas</div>
+        <div style="font-size:11px;color:#1D9E75;margin-top:2px;">El asesor aprende haciendo.</div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#085041;font-style:italic;margin-top:8px;text-align:center;">La excelencia no es aspiracional — es el resultado de ejecutar bien el proceso, semana a semana.</div>
+  </div>
+
+  <!-- SLIDE 7: Cómo se mide y cómo lo logras -->
+  <div style="background:#07101E;border:1px solid #1E3A5F;border-radius:12px;padding:13px 15px;margin-top:10px;">
+    <div style="font-size:13px;font-weight:700;color:#85B7EB;margin-bottom:10px;">❓ ¿Cómo se mide y cómo lo logras?</div>
+
+    <div style="font-size:11px;font-weight:800;color:#378ADD;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Para el Asesor</div>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px;">
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;font-size:11px;color:#85B7EB;line-height:1.6;"><span style="color:#CECBF6;font-weight:600;">· Cumplimiento de agenda</span> — ¿Saliste a visitar los días planeados?</div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;font-size:11px;color:#85B7EB;line-height:1.6;"><span style="color:#CECBF6;font-weight:600;">· Cobertura de clientes</span> — ¿Atendiste a toda tu cartera, no solo a los potenciales?</div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;font-size:11px;color:#85B7EB;line-height:1.6;"><span style="color:#CECBF6;font-weight:600;">· Efectividad de visitas</span> — ¿Para cada visita se generó una propuesta comercial o una venta?</div>
+    </div>
+    <div style="background:#0A1828;border-radius:8px;padding:9px 12px;margin-bottom:12px;border-left:3px solid #378ADD;border-radius:0 8px 8px 0;">
+      <div style="font-size:11px;color:#85B7EB;line-height:1.6;font-style:italic;">✅ <strong style="color:#fff;">¿Cómo lo logras?</strong> Planea tu ruta antes de salir, cubre a todos tus clientes y llega a cada visita con una propuesta comercial preparada.</div>
+    </div>
+
+    <div style="font-size:11px;font-weight:800;color:#1D9E75;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;">Para el Líder</div>
+    <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:12px;">
+      <div style="background:#071410;border-radius:8px;padding:8px 12px;font-size:11px;color:#5DCAA5;line-height:1.6;"><span style="color:#9FE1CB;font-weight:600;">· Disciplina de agenda</span> — ¿Visitas a tus clientes de enfoque según lo planeado?</div>
+      <div style="background:#071410;border-radius:8px;padding:8px 12px;font-size:11px;color:#5DCAA5;line-height:1.6;"><span style="color:#9FE1CB;font-weight:600;">· Planes de desarrollo</span> — ¿Detectas y conviertes oportunidades en tus cuentas clave?</div>
+      <div style="background:#071410;border-radius:8px;padding:8px 12px;font-size:11px;color:#5DCAA5;line-height:1.6;"><span style="color:#9FE1CB;font-weight:600;">· Excelencia como coach (50%)</span> — ¿Cuántos de tus asesores cumplen el estándar?</div>
+    </div>
+    <div style="background:#041C10;border-radius:8px;padding:9px 12px;margin-bottom:12px;border-left:3px solid #1D9E75;border-radius:0 8px 8px 0;">
+      <div style="font-size:11px;color:#5DCAA5;line-height:1.6;font-style:italic;">✅ <strong style="color:#fff;">¿Cómo lo logras?</strong> Revisando resultados cada semana, convirtiendo el dato en conversación de coaching y siendo el primero en ejecutar la rutina que le pides a tu equipo.</div>
+    </div>
+
+    <div style="background:#0C1A2E;border:1px solid #1E3A5F;border-radius:8px;padding:10px 12px;">
+      <div style="font-size:11px;font-weight:700;color:#EF9F27;margin-bottom:6px;">⚡ ¿Por qué es importante la constancia?</div>
+      <div style="font-size:11px;color:#85B7EB;line-height:1.7;">Cuando visitas, cubres y preparas propuestas de manera sistemática, <strong style="color:#fff;">tu resultado deja de depender de la suerte y se vuelve predecible.</strong> Cada ciclo bien ejecutado desarrolla habilidades que se quedan. Y tu cliente lo nota.</div>
+    </div>
+  </div>
+</div></div>
+
+<!-- EXCELENCIA COMERCIAL — IMPACTO Y VALOR -->
+<div class="page" id="page-excel-impacto"><div class="inner-page">
+  <div class="inner-header"><div class="inner-title">💡 Impacto y Valor</div><button class="back-btn" onclick="goTo('page-main')">← Regresar</button></div>
+  <div class="ec-tag">Para el cliente y para ti</div>
+
+  <div style="background:#07101E;border:1px solid #1E3A5F;border-radius:12px;padding:13px 15px;margin-bottom:10px;">
+    <div style="font-size:13px;font-weight:700;color:#85B7EB;margin-bottom:10px;">🤝 Lo que siente el cliente</div>
+    <div style="display:flex;flex-direction:column;gap:5px;">
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#0C447C;color:#85B7EB;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">1</div>
+        <div><div style="font-size:12px;font-weight:600;color:#CECBF6;">Presencia constante</div><div style="font-size:11px;color:#5F8BB5;margin-top:2px;">Visitas en la frecuencia acordada. Sin ausencias sin aviso.</div></div>
+      </div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#0C447C;color:#85B7EB;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">2</div>
+        <div><div style="font-size:12px;font-weight:600;color:#CECBF6;">Se siente atendido</div><div style="font-size:11px;color:#5F8BB5;margin-top:2px;">Sin importar el tamaño — recibe la misma atención que cualquier cliente.</div></div>
+      </div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#0C447C;color:#85B7EB;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">3</div>
+        <div><div style="font-size:12px;font-weight:600;color:#CECBF6;">Cada visita le aporta algo</div><div style="font-size:11px;color:#5F8BB5;margin-top:2px;">No es visita de cortesía — deja una propuesta y agrega valor.</div></div>
+      </div>
+      <div style="background:#0C1A2E;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#0C447C;color:#85B7EB;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">4</div>
+        <div><div style="font-size:12px;font-weight:600;color:#CECBF6;">Asesor de confianza</div><div style="font-size:11px;color:#5F8BB5;margin-top:2px;">Conoce el negocio y propone soluciones concretas.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#0A1A00;border:1px solid #3B6D11;border-radius:12px;padding:13px 15px;">
+    <div style="font-size:13px;font-weight:700;color:#97C459;margin-bottom:10px;">🚀 Lo que ganas tú</div>
+    <div style="display:flex;flex-direction:column;gap:5px;">
+      <div style="background:#0D1A08;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#27500A;color:#97C459;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">1</div>
+        <div><div style="font-size:12px;font-weight:600;color:#C0DD97;">Claridad de tu desempeño</div><div style="font-size:11px;color:#3B6D11;margin-top:2px;">El índice muestra tu constancia sin subjetividad.</div></div>
+      </div>
+      <div style="background:#0D1A08;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#27500A;color:#97C459;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">2</div>
+        <div><div style="font-size:12px;font-weight:600;color:#C0DD97;">Habilidades transferibles</div><div style="font-size:11px;color:#3B6D11;margin-top:2px;">Visitar, preparar propuestas y cerrar bien son competencias que se quedan contigo.</div></div>
+      </div>
+      <div style="background:#0D1A08;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#27500A;color:#97C459;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">3</div>
+        <div><div style="font-size:12px;font-weight:600;color:#C0DD97;">Conversaciones desde información confiable</div><div style="font-size:11px;color:#3B6D11;margin-top:2px;">Tu líder parte de tu resultado para desarrollarte, no de percepciones.</div></div>
+      </div>
+      <div style="background:#0D1A08;border-radius:8px;padding:8px 12px;display:flex;gap:10px;align-items:flex-start;">
+        <div style="background:#27500A;color:#97C459;font-size:10px;font-weight:800;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">4</div>
+        <div><div style="font-size:12px;font-weight:600;color:#C0DD97;">Trayectoria visible</div><div style="font-size:11px;color:#3B6D11;margin-top:2px;">Índice alto sostenido te posiciona para crecer. Eres ejemplo.</div></div>
+      </div>
+    </div>
+    <div style="font-size:11px;color:#27500A;font-style:italic;margin-top:8px;text-align:center;">El índice de excelencia no es una evaluación. Es la herramienta con la que el líder desarrolla y el asesor crece.</div>
   </div>
 </div></div>
 
